@@ -1,0 +1,194 @@
+/* Контейнер централизованный */
+.loginContainer {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: #0d0d0d; /* совпадает с body bg */
+}
+
+/* Форма */
+.loginForm {
+    background-color: #0d0d0d; /* совпадает с index.css */
+    padding: 2rem;
+    border-radius: 1rem;
+    max-width: 400px;
+    width: 100%;
+    margin: 4rem auto 0 auto;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    border: 1px solid #1f1f1f;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+/* Заголовок */
+.title {
+    margin-top: 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #fff;
+    margin-bottom: 1.25rem;
+}
+
+/* Глобальная ошибка */
+.globalError {
+    margin-bottom: 1rem;
+    border: 1px solid #ff3366;
+    background-color: #2a0d14;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+    color: #ff667f;
+    border-radius: 0.5rem;
+
+    opacity: 0;
+    max-height: 0;
+    animation: ani 0.4s forwards;
+}
+
+@keyframes ani {
+    0% {opacity: 0; max-height: 0;}
+    100% {opacity: 1; max-height: 2000px;}
+}
+
+
+
+
+/* Метка и блок поля */
+.labelBlock {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.labelText {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #fff;
+    user-select: none;
+}
+
+/* Поля ввода - базовые стили лежат в index.css,
+   тут добавляем только специфичное */
+.inputError {
+    margin-top: 0.25rem;
+    font-size: 0.875rem;
+    color: #ff667f;
+    min-height: 1.25rem; /* резервируем место под строку текста ошибки */
+}
+
+/* Контейнер для пароля с кнопкой */
+.flexRow {
+    display: flex;
+}
+
+.flexGrow {
+    flex-grow: 1;
+    border-radius: 0.5rem 0 0 0.5rem; /* левый скругленный */
+    border-right: none;
+}
+
+.buttonShowHide {
+    border: 2px solid transparent;
+    border-left: none;
+    border-radius: 0 0.5rem 0.5rem 0;
+    background: #1a1a1a;
+    padding: 0 1rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #f5f5f5;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.buttonShowHide:hover,
+.buttonShowHide:focus {
+    background-color: #2a0d14;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255,0,64,0.3);
+}
+
+/* Чекбокс и лейбл */
+.checkboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.875rem;
+    color: #fff;
+    user-select: none;
+}
+
+/* Контейнер для ссылки и кнопки */
+.flexBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Ссылка */
+.linkForgot {
+    font-size: 0.875rem;
+    color: #ff0040;
+    text-decoration: underline;
+    cursor: pointer;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.linkForgot:hover,
+.linkForgot:focus {
+    color: #ff4576;
+    outline: none;
+}
+
+/* Кнопка отправки */
+.submitButton {
+    margin-left: 1rem;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    background-color: #ff0040;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.submitButton:hover:not(:disabled) {
+    background-color: #e60039;
+    transform: translateY(-1px);
+}
+
+.submitButton:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.submitButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Demo текст */
+.demoText {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: #888;
+}
+
+.demoCode {
+    background-color: #1a1a1a;
+    padding: 0 0.25rem;
+    border-radius: 0.25rem;
+    font-family: monospace;
+    color: #f5f5f5;
+}
+
+/* Анимация из index.css */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
