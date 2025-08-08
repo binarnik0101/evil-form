@@ -103,7 +103,6 @@ export const LoginForm: React.FC = () => {
                         value={state.email}
                         onChange={(ev) => handleChange("email", ev.target.value)}
                         onBlur={() => handleBlur("email")}
-                        className={styles.inputField}
                     />
 
                         <div id="email-error" role="alert" className={styles.inputError}>
