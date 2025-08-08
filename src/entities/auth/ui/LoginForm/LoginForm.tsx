@@ -127,8 +127,7 @@ export const LoginForm: React.FC = () => {
                             value={state.password}
                             onChange={(ev) => handleChange("password", ev.target.value)}
                             onBlur={() => handleBlur("password")}
-                            className={styles.inputField + " " + styles.flexGrow}
-                            style={{ borderRadius: "0.375rem 0 0 0.375rem", borderRight: "none" }}
+                            className={styles.flexGrow}
                         />
                         <button
                             type="button"

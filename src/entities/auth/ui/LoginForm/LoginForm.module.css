@@ -79,6 +79,7 @@
 /* Контейнер для пароля с кнопкой */
 .flexRow {
     display: flex;
+    gap: 1rem;
 }
 
 .flexGrow {
@@ -90,7 +91,7 @@
 .buttonShowHide {
     border: 2px solid transparent;
     border-left: none;
-    border-radius: 0 0.5rem 0.5rem 0;
+    border-radius: 0.5rem;
     background: #1a1a1a;
     padding: 0 1rem;
     cursor: pointer;
